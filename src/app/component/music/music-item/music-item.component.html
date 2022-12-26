@@ -1,0 +1,14 @@
+<form #form="ngForm" [formGroup]="formGroup" (ngSubmit)="save()">
+  <div>
+    <h2>{{sound?.id? 'Update' : 'Create'}} music</h2>
+      Name
+      <input   placeholder="Name" formControlName="name">
+
+
+      Genre
+      <input  placeholder="Genre" formControlName="genre">
+
+    <button  color="primary" type="submit" >Save</button>
+  </div>
+
+</form>

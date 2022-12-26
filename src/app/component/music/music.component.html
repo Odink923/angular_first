@@ -1,0 +1,29 @@
+<div >
+  <button mat-raised-button color="primary" routerLink="/music/item">
+
+    <span>Add User</span>
+  </button>
+  <table class="table table-striped">
+
+    <thead>
+
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Genre</th>
+      <td>Link</td>
+      <td></td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let i of sound">
+      <td>{{i.id}}</td>
+      <td>{{i.name}}</td>
+      <td>{{i.genre}}</td>
+      <td><a href="https://www.youtube.com/results?search_query={{i.name}}">link</a></td>
+      <td><button [routerLink]="['/music/item', i.id]">Update</button></td>
+      <td><button (click)="delete(i.id)">Delete</button></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
